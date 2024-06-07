@@ -1,15 +1,22 @@
+import list.operacoesBasicas.CatalogoLivros;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CatalogoLivros catalogoLivros = new CatalogoLivros();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        catalogoLivros.adicionarLivros("Livro 1","Autor 1",2020);
+        catalogoLivros.adicionarLivros("Livro 1","Autor 2",2021);
+        catalogoLivros.adicionarLivros("Livro 2","Autor 2",2022);
+        catalogoLivros.adicionarLivros("Livro 3","Autor 3",2023);
+        catalogoLivros.adicionarLivros("Livro 4","Autor 4",1994);
+
+        System.out.println(catalogoLivros.pesquisaPorAutor("Autor 2"));
+        System.out.println(catalogoLivros.pesquisarPorIntervaloAnos(1990,2020));
+        System.out.println(catalogoLivros.pesquisaPorTitulo("Livro 1"));
+
+
+
     }
 }
