@@ -1,22 +1,19 @@
 import list.operacoesBasicas.CatalogoLivros;
+import list.operacoesBasicas.OrdenacaoPessoas;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        CatalogoLivros catalogoLivros = new CatalogoLivros();
+        OrdenacaoPessoas ordenacaoPessoas = new OrdenacaoPessoas();
 
-        catalogoLivros.adicionarLivros("Livro 1","Autor 1",2020);
-        catalogoLivros.adicionarLivros("Livro 1","Autor 2",2021);
-        catalogoLivros.adicionarLivros("Livro 2","Autor 2",2022);
-        catalogoLivros.adicionarLivros("Livro 3","Autor 3",2023);
-        catalogoLivros.adicionarLivros("Livro 4","Autor 4",1994);
+        ordenacaoPessoas.adicionarPessoa("Nome 1", 20, 1.56);
+        ordenacaoPessoas.adicionarPessoa("Nome 2", 30, 1.80);
+        ordenacaoPessoas.adicionarPessoa("Nome 3", 25, 1.70);
+        ordenacaoPessoas.adicionarPessoa("Nome 4", 17, 1.56);
 
-        System.out.println(catalogoLivros.pesquisaPorAutor("Autor 2"));
-        System.out.println(catalogoLivros.pesquisarPorIntervaloAnos(1990,2020));
-        System.out.println(catalogoLivros.pesquisaPorTitulo("Livro 1"));
-
-
+        System.out.println(ordenacaoPessoas.ordennarPorIdade());
+        System.out.println(ordenacaoPessoas.ordenarPorAltura());
 
     }
 }
