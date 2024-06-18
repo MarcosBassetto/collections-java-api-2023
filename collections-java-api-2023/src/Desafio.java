@@ -1,6 +1,3 @@
-package set.operacoesBasicas.cofre;
-
-
 import java.util.Scanner;
 
 abstract class Cofre {
